@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 
 
+
 // creates an express app
 const app = express();
 
@@ -18,10 +19,12 @@ app.use(express.static("public"))
 
 
 // import routes using import
+import cryptoRoutes from "./routes/crypto.routes.js"
 
 
 
 // declare routes
+app.use("/api/v1/crypto", cryptoRoutes)
 
 
 export default app;
